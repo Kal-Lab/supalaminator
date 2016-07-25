@@ -8,10 +8,10 @@
 /* Rotary Encoder */
 #define ENC_A_PIN 2
 #define ENC_B_PIN 3
-#define ENC_SW_PIN A0
+#define ENC_SW_PIN A1
 
 /* Relay */
-#define RELAY_PIN A1
+#define RELAY_PIN A0
 
 /* THERMAL */
 #define THERM_DO 4
@@ -21,10 +21,10 @@
 /* LCD */
 #define LCD_RS_PIN 12
 #define LCD_EN_PIN 11
-#define LCD_D4_PIN  7
-#define LCD_D5_PIN  8
+#define LCD_D4_PIN  10
+#define LCD_D5_PIN  7
 #define LCD_D6_PIN  9
-#define LCD_D7_PIN  10
+#define LCD_D7_PIN  8
 
 
 #define THRESHOLD      1
