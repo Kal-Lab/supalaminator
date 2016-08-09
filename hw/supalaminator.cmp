@@ -1,0 +1,59 @@
+Cmp-Mod V01 Created by Cvpcb (after 2015-mar-04 BZR unknown)-product   date = Tue 09 Aug 2016 01:09:16 PM CEST
+
+BeginCmp
+TimeStamp = /57965443;
+Reference = ARD1;
+ValeurCmp = Arduino_Nano;
+IdModule  = Arduino:Arduino Nano;
+EndCmp
+
+BeginCmp
+TimeStamp = /5795E8C5;
+Reference = DS1;
+ValeurCmp = LCD-016N002L;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x08;
+EndCmp
+
+BeginCmp
+TimeStamp = /57965F69;
+Reference = P1;
+ValeurCmp = CONN_RELAY;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x03;
+EndCmp
+
+BeginCmp
+TimeStamp = /5796551D;
+Reference = P2;
+ValeurCmp = CONN_THERM;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x05;
+EndCmp
+
+BeginCmp
+TimeStamp = /57965A8D;
+Reference = P3;
+ValeurCmp = CONN_ROTARY;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x05;
+EndCmp
+
+BeginCmp
+TimeStamp = /57A9B979;
+Reference = P4;
+ValeurCmp = CONN_01X02;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x02;
+EndCmp
+
+BeginCmp
+TimeStamp = /5796688A;
+Reference = R1;
+ValeurCmp = R;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM7mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /57966A62;
+Reference = R2;
+ValeurCmp = R;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM7mm;
+EndCmp
+
+EndListe

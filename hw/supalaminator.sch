@@ -10,6 +10,7 @@ LIBS:cmos4000
 LIBS:adc-dac
 LIBS:memory
 LIBS:xilinx
+LIBS:special
 LIBS:microcontrollers
 LIBS:dsp
 LIBS:microchip
@@ -396,4 +397,32 @@ Wire Wire Line
 	2150 5000 2700 5000
 Wire Wire Line
 	2150 5200 2700 5200
+$Comp
+L CONN_01X02 P4
+U 1 1 57A9B979
+P 2550 5800
+F 0 "P4" H 2550 5950 50  0000 C CNN
+F 1 "CONN_01X02" V 2650 5800 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 2550 5800 60  0001 C CNN
+F 3 "" H 2550 5800 60  0000 C CNN
+	1    2550 5800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2600 5600 2600 5300
+Wire Wire Line
+	2600 5300 2700 5300
+$Comp
+L GND #PWR014
+U 1 1 57A9BA3E
+P 2100 5600
+F 0 "#PWR014" H 2100 5350 50  0001 C CNN
+F 1 "GND" H 2105 5427 50  0000 C CNN
+F 2 "" H 2100 5600 50  0000 C CNN
+F 3 "" H 2100 5600 50  0000 C CNN
+	1    2100 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 5600 2100 5600
 $EndSCHEMATC
