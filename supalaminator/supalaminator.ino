@@ -80,12 +80,12 @@ byte degree_char[8] = {
 #define HEATING_OFF 1
 
 #define LCD_UPDATE  200
-#define CHAR_UPDATE  1000
+#define CHAR_UPDATE  500
 
 MAX6675 thermocouple(THERM_CLK, THERM_CS, THERM_DO);
 Encoder enc(ENC_A_PIN, ENC_B_PIN);
 // initialize the library with the numbers of the interface pins
-LiquidCrystal lcd(LCD_RS_PIN, LCD_EN_PIN, LCD_D4_PIN, LCD_D4_PIN, LCD_D5_PIN, LCD_D6_PIN, LCD_D7_PIN);
+LiquidCrystal lcd(LCD_RS_PIN, LCD_EN_PIN, LCD_D4_PIN, LCD_D5_PIN, LCD_D6_PIN, LCD_D7_PIN);
 
 float ref_temp = DEFAULT_TEMP;
 
@@ -99,10 +99,10 @@ lcd_draw_ref_temp()
 {
   lcd.setCursor(0,0);
 
-  lcd.print("Ref ");
+  lcd.print("Ref:  ");
   lcd.print(ref_temp);
   lcd.write((uint8_t)DEGREE_CHAR);
-  lcd.print(" ");
+  lcd.print("  ");
 
   Serial.print("New reference temp: ");
   Serial.println(ref_temp);
@@ -137,7 +137,7 @@ static void
 draw_lcd(float cur_temp)
 {
   /* Current temp */
-  lcd.setCursor(1,0);
+  lcd.setCursor(0, 1);
   lcd.print("Temp: ");
   lcd.print(cur_temp);
   lcd.write((uint8_t)DEGREE_CHAR);
@@ -152,10 +152,11 @@ draw_lcd(float cur_temp)
         heat_char_idx = HEAT_INVERT_CHAR;
       else 
         heat_char_idx = HEAT_CHAR;
-     lcd.write((uint8_t) heat_char_idx);
-     heat_char_update = millis();
+        heat_char_update = millis();
     }
+    lcd.write((uint8_t) heat_char_idx);
   }
+  lcd.print("  ");
   last_millis = millis();
 }
 
@@ -166,9 +167,9 @@ int get_enc_dir()
   int dir = 0;
 
   if (new_pos < last_enc_pos)
-    dir = 1;
-  else if (new_pos > last_enc_pos)
     dir = -1;
+  else if (new_pos > last_enc_pos)
+    dir = 1;
 
   last_enc_pos = new_pos;
   delay(50);
